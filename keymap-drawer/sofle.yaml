@@ -1,9 +1,68 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', DELETE, ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT,
-    Z, X, C, V, B, MUTE, '', N, M, ',', ., /, RSHFT, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI]
-  lower:
-  - '&studio_unlock'
+  Base:
+  - {t: ESC, s: '`'}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - BSPC
+  - LEFT SHIFT
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LEFT CONTROL
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - MUTE
+  - PLAY PAUSE
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RSHFT
+  - LGUI
+  - LALT
+  - LCTRL
+  - Symbols
+  - SPACE
+  - ENTER
+  - Nav
+  - RCTRL
+  - LALT
+  - RGUI
+  Symbols:
+  - {t: ▽, type: trans}
   - F1
   - F2
   - F3
@@ -15,17 +74,17 @@ layers:
   - F9
   - F10
   - F11
-  - '`'
+  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
   - '4'
   - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
   - F12
   - {t: ▽, type: trans}
   - '!'
@@ -33,27 +92,27 @@ layers:
   - '#'
   - $
   - '%'
-  - ^
-  - '&'
-  - KP MULTIPLY
-  - (
-  - )
+  - '-'
+  - '='
+  - '*'
+  - '['
+  - ']'
   - '|'
   - {t: ▽, type: trans}
   - '='
   - '-'
-  - KP PLUS
+  - +
   - '{'
   - '}'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - ;
-  - ':'
-  - \
+  - _
+  - +
+  - '{'
+  - '}'
+  - '|'
   - {t: ▽, type: trans}
-  - '&studio_unlock'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -63,13 +122,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  raise:
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  Nav:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -83,8 +142,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PG UP
+  - UP ARROW
   - {t: ▽, type: trans}
-  - UP
   - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
@@ -94,10 +153,10 @@ layers:
   - LSHFT
   - {t: ▽, type: trans}
   - CLCK
-  - PG DN
   - LEFT
   - DOWN
   - RIGHT
+  - {t: ▽, type: trans}
   - DEL
   - BSPC
   - {t: ▽, type: trans}
@@ -124,7 +183,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  adjust:
+  System:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -138,10 +197,39 @@ layers:
   - ''
   - ''
   - EP TOG
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&studio_unlock'
+  - RGB SPD
+  - RGB BRI
+  - RGB SPI
+  - ''
+  - ''
+  - ''
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - RGB HUD
+  - RGB BRD
   - RGB HUI
-  - RGB SAD
-  - RGB SAI
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&caps_word'
+  - ''
+  - ''
+  - RGB EFR
+  - '&bl BL_TOG'
   - RGB EFF
   - ''
   - ''
@@ -149,35 +237,6 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - RGB BRD
-  - RGB BRI
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - RGB TOG
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - {type: held}
   - ''
   - ''
@@ -185,3 +244,10 @@ layers:
   - ''
   - ''
   - ''
+combos:
+- p: [32, 31]
+  k: BACKSPACE
+- p: [27, 33]
+  k: DELETE
+- p: [25, 41]
+  k: ESCAPE
